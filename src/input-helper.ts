@@ -41,15 +41,15 @@ export async function getInputs(): Promise<IGitSourceSettings> {
     githubWorkspacePath,
     result.repositoryPath
   )
-  if (
-    !(result.repositoryPath + path.sep).startsWith(
-      githubWorkspacePath + path.sep
-    )
-  ) {
-    throw new Error(
-      `Repository path '${result.repositoryPath}' is not under '${githubWorkspacePath}'`
-    )
-  }
+  // if (
+  //   !(result.repositoryPath + path.sep).startsWith(
+  //     githubWorkspacePath + path.sep
+  //   )
+  // ) {
+  //   throw new Error(
+  //     `Repository path '${result.repositoryPath}' is not under '${githubWorkspacePath}'`
+  //   )
+  // }
 
   // Workflow repository?
   const isWorkflowRepository =
